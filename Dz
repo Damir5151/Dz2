@@ -1,1 +1,27 @@
+class Animal:
+    def __init__(self, name, species, age, weight, color, height):
+        self.name = name
+        self.species = species
+        self.age = age
+        self.weight = weight
+        self.color = color
+        self.height = height
+        print(f"{self.name} народився!")
 
+    def make_sound(self, sound):
+        print(f"{self.name} каже {sound}!")
+
+    def description(self):
+        print(f"Це {self.name}, {self.species} віком {self.age} років, вага: {self.weight} кг, колір: {self.color}, зріст: {self.height} см.")
+
+    def change_weight(self, new_weight):
+        self.weight = new_weight
+        print(f"Вага {self.name} тепер {self.weight} кг.")
+
+    def __del__(self):
+        print(f"{self.name} був видалений.")
+
+animal2 = Animal("Бобік", "Собака", 5, 20, "чорний", 50)
+
+animal2.description()
+animal2.change_weight(22)
